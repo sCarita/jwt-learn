@@ -25,21 +25,21 @@ $ npm install
 
 ### Dev #0 - Docker services locally
 First you need to activate a postgresql database, redis cache and other utilitaries. A user should run locally:
-    - `adminer`: Database explorer running at `http://localhost:8080/`
-    - `postgresql`: PostgreSQL Database running at `http://localhost:6500/` and `http://postgres:5432/` (inside docker private network).
-    - `redis`: Redis Cache running at `http://localhost:6379/` and `http://redis:6379/` (inside docker private network).
+- `adminer`: Database explorer running at `http://localhost:8080/`
+- `postgresql`: PostgreSQL Database running at `http://localhost:6500/` and `http://postgres:5432/` (inside docker private network).
+- `redis`: Redis Cache running at `http://localhost:6379/` and `http://redis:6379/` (inside docker private network).
 To activate all services:
-    1. Go to local infrastructure folder: `$ cd infrastructure/local`.
-    2. Create a `.dev.env` file inside that folder with:
-        ```
-        DATABASE_PORT=6500
-        POSTGRES_PASSWORD=fakePassword987
-        POSTGRES_USER=postgres
-        POSTGRES_DB=trpc_prisma
-        POSTGRES_HOST=postgres
-        POSTGRES_HOSTNAME=127.0.0.1
-        ```
-    3. Run `$ docker-compose up` or `$ docker-compose up -d` for silent mode.
+1. Go to local infrastructure folder: `$ cd infrastructure/local`.
+2. Create a `.dev.env` file inside that folder with:
+    ```
+    DATABASE_PORT=6500
+    POSTGRES_PASSWORD=fakePassword987
+    POSTGRES_USER=postgres
+    POSTGRES_DB=trpc_prisma
+    POSTGRES_HOST=postgres
+    POSTGRES_HOSTNAME=127.0.0.1
+    ```
+3. Run `$ docker-compose up` or `$ docker-compose up -d` for silent mode.
 
 ### Dev #1 - Node backend
 
